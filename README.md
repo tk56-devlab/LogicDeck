@@ -57,18 +57,31 @@ Storage: LocalStorage API
 
 Design: CSS-in-JS (Inline Styles) による軽量なスタイリング
 
-5. 開発環境のセットアップ
-   Bash
+5. 開発経緯
+Phase 1: Project Foundation (2月中旬)
+2026.02.16: Create Next App による環境構築。
 
-# クローン
+初期コア機能実装: 優先順位スコア算出のロジック基盤を構築し、初期UI（ボタン・レイアウト）とREADMEの基本構成を整備。
 
-git clone <リポジトリURL>
-cd priority-score-app
+Phase 2: Logic & Interactive UI (2月18日〜19日)
+戦略的レイヤーの導入: タスクを MUST / SHOULD / WANT の3層に分類する設計を導入。
 
-# 依存関係のインストール
+動的UIのプロトタイプ: スライダー（Intensity）の数値に連動してタスクの重要度を可視化する TaskCard のプロトタイプを実装。
 
-npm install
+データの永続化: localStorage を活用し、ブラウザを閉じてもタスクが消えない管理システムを構築。
 
-# 開発サーバー起動
+Phase 3: Refinement & Data Visualization (2月25日〜26日)
+アルゴリズムの高度化: 締め切り（Deadline）までの残り日数やカテゴリ（Work/Study/Private）に応じたボーナス加点ロジックを統合。
 
-npm run dev
+UIコンポーネントの洗練: 各タスクカードのスタイルを調整し、グラスモーフィズムを基調としたモダンなデザインへアップデート。
+
+Phase 4: Multi-mode & Final Polish (2月27日〜現在)
+解析モードの実装: ユーザーのメンタル状況に合わせた Appraisal Mode（Sweet / Normal / Spicy）をリザルトページに搭載。
+
+グローバル対応とリファクタリング:
+
+UIテキストの英語化およびコード内コメントの英語統一。
+
+複雑化したロジックを lib/taskLogic.ts へ分離し、保守性の高い設計へ移行。
+
+ブランチ運用と最終調整: 複数機能の並行開発に伴うブランチ管理と、各コンポーネントの型安全性の強化を実施。
