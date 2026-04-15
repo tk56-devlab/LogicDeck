@@ -1,7 +1,7 @@
 # LogicDeck
 
 ## 📸 画面イメージ
-（後でスクリーンショットを追加予定）
+![alt text](logicdeck.png)
 
 ## ✨ 主な機能
 
